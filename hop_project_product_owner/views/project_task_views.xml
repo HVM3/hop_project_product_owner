@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hop_view_project_task_form_inherit">
+            <field name="name">hop.project.task.form.inherit.product</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field  string="Product" name="product_id" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

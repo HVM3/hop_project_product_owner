@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hop_view_product_product_form_inherit">
+            <field name="name">hop.product.product.form.inherit.product</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='categ_id']" position="after">
+                    <field  string="Product Owner" name="user_id" attrs="{'invisible': [('user_id','=',False)]}" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
